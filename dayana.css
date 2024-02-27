@@ -1,0 +1,161 @@
+body {
+    margin: 0; /*Elimina el margen predeterminado del cuerpo*/
+    background-size: cover; /*hace refencia que la imagen del fondo cubra todo el viewport*/
+    background-position: center;/*centra la imagen de fondo*/
+    display: flex; 
+    flex-direction: column; /* Estos dos configuran el modelo de la caja como un contenedor*/
+    color: #5B2730; /*Establece el color de texto global*/
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+
+.titulo {
+    font-weight: bold;/*Hace que el texto tenga un peso de fuente en negrita.*/
+    margin-top: 150px;/*Agrega un margen superior de 150 píxeles al título.*/
+    color:  #5B2730;/*Establece el color del texto del título.*/
+    font-family: Arial, Helvetica, sans-serif;/* Establece la fuente del título*/
+    font-weight: bold;/*Hace que el título tenga un peso de fuente en negrita.*/
+    font-size: 64px;/*Establece el tamaño de fuente del título a 64 píxeles.*/
+}
+  
+.subtitulo {
+    margin-top: 20px;/*Agrega un margen superior de 20 píxeles al subtítulo.*/
+    color:  #5B2730;/*Establece el color del texto del subtítulo.*/
+    font-family: Arial, Helvetica, sans-serif;/*Establece la fuente del subtítulo.*/
+    font-size: 36px;/* Establece el tamaño de fuente del subtítulo a 36 píxeles.*/
+}
+
+.section-5, .imagen-2 {
+    position: relative;/*Establece el posicionamiento relativo para que se pueda usar z-index.*/
+    background-image: url("fond0_3.jpg"); /*Establece una imagen de fondo.*/ 
+    background-size: cover; /*Indica que la imagen de fondo debe cubrir todo el elemento, sin distorsionarse, y manteniendo su relacion de aspecto.*/
+    background-position: center; /*establece la posicion inicial de la imagen de fondo en el centro del elemento.*/
+    padding: 20px; /*Agrega relleno alrededor del contenido del elemento.*/
+    text-align: center;/*Alinea el texto en el centro dentro de su contenedor.*/
+    max-width: 100%;/*Asegura que la imagen no exceda el ancho del contenedor que la contiene.*/
+    min-height: 170%;/*Hace que la altura de la imagen sea igual al 170% de su contenedor.*/
+    z-index: 2;/*Controla la superposición de elementos, asegurando que este contenedor esté encima de otros elementos con un z-index inferior.*/
+  }
+  
+  .section-5, .imagen-2 {
+    position: relative;
+    background-image: url("fond0_3.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    max-width: 100%;
+    min-height: 150%;
+    z-index: 2;
+  }
+  
+  .imagen-2::before {
+    content: "";/*Se utiliza para insetar contenido generado antes del contenido del elemento seleccionado (en este caso, un fondo blanco semitransparente)*/
+    position: absolute;/**/
+    top: 0;/**/
+    right: 0;/**/
+    bottom: 0;/**/
+    left: 0;/**/
+    background-color: rgba(255, 247, 247, 0.5);/**/
+    z-index: -1;/**/
+  }
+  
+  .testimonial-header {
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-item {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #F5BDBD;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .testimonial-item__title {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5B2730; /* Agregar esta línea para la línea debajo del título */
+  }
+  
+  .testimonial-item__text {
+    text-align: left;
+    margin: 0 20px; /* Ajusta el margen del texto a la izquierda y derecha */
+  }
+  
+  .testimonial-item__image {
+    display: flex;
+    flex-direction: column;
+    align-items:end; /* Alinea la imagen al final */
+    margin-bottom: 10px;
+  }
+  
+  
+  .testimonial-item__image img {
+    width: 130px;
+    height: 130px;
+    background-color: #ddd;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 10px; /* Espaciado entre la imagen y el autor */
+    margin-top: -150px;
+  }
+  
+  .testimonial-item__author {
+    margin: 25px;
+    margin-top: auto; /* Empuja el autor hacia la parte inferior de la card */
+    font-style: italic; /* Opcional: estilo itálico para el autor */
+  }
+  
+  .testimonial-item__actions {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .testimonial-item__button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #5B2730;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, color 0.3s ease; /* Añade la propiedad de transición para el color del texto */
+  }
+  
+  .testimonial-item__button:hover {
+    background-color: #F47D7D;
+    color: #FFFFFF;
+  }
+  
+  .testimonial-item__button:active {
+    background-color: #FA4E4E;
+    color: #FFFFFF;
+    transform: scale(0.95);
+  }
+  
+  .cierre__button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #5B2730;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, color 0.3s ease; /* Añade la propiedad de transición para el color del texto */
+  }
+  
+  .cierre__button:hover {
+    background-color: #F47D7D;
+    color: #FFFFFF;
+  }
+  
+  .cierre__button:active {
+    background-color: #FA4E4E;
+    color: #FFFFFF;
+    transform: scale(0.95);
+  }
